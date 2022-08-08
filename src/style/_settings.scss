@@ -1,0 +1,77 @@
+// ---------- FONT
+@font-face {
+    font-family: "font-1";
+    src: url(./assets/fonts/Fraunces-Black.ttf);
+}
+
+@font-face {
+    font-family: "font-2";
+    src: url(./assets/fonts/Barlow-Regular.ttf);
+}
+
+@font-face {
+    font-family: "font-3";
+    src: url(./assets/fonts/Barlow-Bold.ttf);
+}
+
+$font-1:"font-1",
+serif;
+$font-2:"font-2",
+sans-serif;
+$font-3:"font-3",
+sans-serif;
+
+// ---------- COLOR
+$color-1: #0E8784;
+$color-2: #333D4B;
+$color-3: #FDD6BA;
+$color-4: #FEFCF7;
+$color-5: #83888F;
+
+// ---------- MIXIN
+@mixin alignChildren($align, $space) {
+    display: flex;
+    align-items: $align;
+    justify-content: $space;
+}
+
+// ---------- RESET CSS
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: $color-5;
+}
+
+body {
+    background-color: $color-4;
+    padding: 0 80px 80px;
+    max-width: 1980px;
+    margin: 0 auto;
+}
+
+// ---------- TEXT
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $font-1;
+}
+
+p {
+    font-size: 16px;
+    line-height: 26px;
+    font-family: $font-2;
+}

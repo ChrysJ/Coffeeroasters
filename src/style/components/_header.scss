@@ -1,0 +1,39 @@
+.header {
+    height: 115px;
+    display: flex;
+    @include alignChildren(center, space-between);
+
+
+    .header-logo {
+        @include alignChildren(center, flex-start);
+
+        img{
+            width: 200px;
+        }
+        }
+
+
+    .navigation {
+        @include alignChildren(center, flex-end);
+
+        ul {
+            @include alignChildren(center, flex-end);
+
+            li {
+                padding: 0 15px;
+                font-family: $font-3;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: 14px;
+
+            
+                &:hover {
+                    color: $color-2;
+                }
+            }
+                .nav-active{
+                    color: $color-2;
+                }
+        }
+    }
+}

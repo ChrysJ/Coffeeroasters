@@ -1,0 +1,15 @@
+.steper{
+    width: 68%;
+    height: 2px;
+    background-color: $color-3;
+    @include alignChildren (center, space-between);
+
+    .step{
+        width: 30px;
+        height: 30px;
+        background-color: $color-4;
+        border: 2px solid $color-1;
+        border-radius: 100%;
+    }
+}
+
