@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { dataCollection } from "../../data/Collectiondata";
+import { dataCollection } from "../../data/collectionData";
 
 const Ourcollection = () => {
   const [Collection] = useState(dataCollection);
@@ -11,7 +11,7 @@ const Ourcollection = () => {
       </div>
       <div className="collection">
         {Collection.map((item) => (
-          <div className="item-collection">
+          <div className="item-collection" key={item.title}>
             <img src={item.img} alt={item.title} />
             <h3>{item.title}</h3>
             <p>{item.text}</p>

@@ -1,0 +1,89 @@
+// ------About herobanner
+
+.about-herobanner,
+.subscribe-herobanner {
+    height: 50vh;
+    margin-bottom: 170px;
+}
+
+.about-herobanner {
+    background-image: url(../../../public/assets/img/about/image-hero-whitecup.jpg);
+
+}
+
+.herobanner.about-herobanner,
+.herobanner.subscribe-herobanner {
+
+    div {
+        h1 {
+            font-size: 2.5em;
+            line-height: 30px;
+        }
+
+        p {
+            margin: 40px 0 0;
+            width: 40%;
+        }
+    }
+}
+
+// ------Commitment
+.commitment-section {
+    color: $color-2;
+    margin: 150px auto 255px auto;
+    padding: 0 85px;
+    @include alignChildren(center, space-between);
+
+    .img-container {
+        padding-right: 4.5%;
+
+        img {
+            border-radius: 10px;
+            display: block;
+            margin-left: auto;
+        }
+    }
+
+    .text-container {
+        padding-left: 4.5%;
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 35px;
+        }
+    }
+}
+
+// Quality
+.quality-section {
+    background-image: url(../../../public/assets/img/bg-quality.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 170px;
+    border-radius: 10px;
+    @include alignChildren(flex-start, space-between);
+    position: relative;
+    
+    .img-container {
+       position: absolute;
+       right: 90px;
+       bottom: 85px;
+        img {
+            border-radius: 10px;
+        }
+    }
+
+    .text-container {
+        padding: 85px 4.5%  175px 85px;
+        color: $color-4;
+        h2{
+            font-size: 2.5em;
+            margin-bottom: 35px;
+        }
+        p{
+            opacity: 0.80;
+            width: 50%;
+        }
+    }
+}

@@ -1,10 +1,21 @@
 import React from "react";
-import logo from "../style/assets/img/shared/logo.svg";
+import logoHeader from "../style/assets/img/shared/logo.svg";
+import logoFooter from "../style/assets/img/shared/logo-footer.svg";
+import { NavLink } from "react-router-dom";
 
-const Logo = () => {
+const Logo = ({ header, footer, link }) => {
   return (
     <div className="header-logo">
-      <img src={logo} alt="ceci est mon logo"></img>
+      {header && (
+        <NavLink to={link}>
+          <img src={logoHeader} alt="ceci est mon logo"></img>
+        </NavLink>
+      )}
+      {footer && (
+        <NavLink to={link}>
+          <img src={logoFooter} alt="ceci est mon logo"></img> 
+        </NavLink>
+      )}
     </div>
   );
 };

@@ -3,7 +3,6 @@ import { useState } from "react";
 import { dataQualityServices } from "../../data/qualityServicesData";
 
 const Chooseus = () => {
-  console.log(dataQualityServices);
   const [qualitysServices] = useState(dataQualityServices);
   return (
     <section className="section-quality">
@@ -16,7 +15,7 @@ const Chooseus = () => {
         </p>
         <div className="quality-services">
           {qualitysServices.map((services) => (
-            <div className="services">
+            <div className="services" key={services.title}>
               <img src={services.img} alt="" />
               <h3>{services.title}</h3>
               <p>{services.text}</p>

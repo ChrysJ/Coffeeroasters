@@ -1,15 +1,95 @@
-.steper{
-    width: 68%;
-    height: 2px;
-    background-color: $color-3;
-    @include alignChildren (center, space-between);
+.section-works, .section-stepper  {
+    padding: 0 150px 0 85px;
+    margin-bottom: 200px;
 
-    .step{
-        width: 30px;
-        height: 30px;
-        background-color: $color-4;
-        border: 2px solid $color-1;
-        border-radius: 100%;
+    h5 {
+        color: $color-5;
+        font-size: 1.5em;
+        margin-bottom: 80px;
+    }
+
+    .how-it-works {
+        width: 100%;
+        margin-bottom: 65px;
+
+        .steper {
+            width: 68.7%;
+            height: 2px;
+            background-color: $color-3;
+            @include alignChildren (center, space-between);
+            margin-bottom: 65px;
+
+            .step {
+                width: 30px;
+                height: 30px;
+                background-color: $color-4;
+                border: 2px solid $color-1;
+                border-radius: 100%;
+
+                &.section-stepper {
+                    background-color: transparent;
+                }
+            }
+        }
+
+        .workStep {
+            display: flex;
+            width: 100%;
+
+            .step {
+                width: 100%;
+                margin-right: 95px;
+
+                span {
+                    font-family: $font-1;
+                    font-size: 4.5em;
+                    color: $color-3;
+                }
+
+                h3 {
+                    color: $color-2;
+                    font-size: 2em;
+                    margin: 40px 0;
+
+                    &.section-stepper {
+                        color: $color-3;
+                    }
+                }
+
+                p {
+                    color: $color-2;
+                }
+            }
+        }
     }
 }
 
+.section-stepper {
+    background-color: $color-2;
+    padding: 100px 40px 100px 85px;
+
+    .how-it-works {
+        margin-bottom: 0px;
+
+        .steper {
+            @include alignChildren (center, space-between);
+            .step {
+               background-color: $color-2;
+            }
+        }
+        .workStep {
+            .step {
+                h3 {
+                    color: $color-4;
+
+                    &.section-stepper {
+                        color: $color-3;
+                    }
+                }
+                p {
+                    color: $color-4;
+                }
+            }
+        }
+    }
+}

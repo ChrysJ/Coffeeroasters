@@ -1,0 +1,38 @@
+.footer{
+    background-color: $color-2;
+    @include alignChildren (center, space-between);
+    padding: 0 60px 0 85px;
+
+.footer-left{
+display: flex;
+
+
+    .navigation {
+        @include alignChildren(center, center);
+        margin-left: 100px;
+
+        ul {
+            @include alignChildren(center, center);
+
+            li:hover {
+                    color: $color-4;
+                }
+            
+                .nav-active{
+                    color: $color-4;
+                }
+        }
+    }
+}
+    .socialmedias{
+        i{
+            padding-right: 25px;
+            color: $color-4;
+            font-size: 1.5em;
+            
+            &:hover{
+                color: $color-3;
+            }
+        }
+    }
+}
