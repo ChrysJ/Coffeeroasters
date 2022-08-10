@@ -3,6 +3,10 @@
 .home-herobanner {
     height: calc(100vh - 115px);
     background-image: url(../../../public/assets/img/home/image-hero-coffeepress.jpg);
+
+    p {
+        margin: 40px 0 60px;
+    }
 }
 
 .herobanner {
@@ -25,7 +29,7 @@
         }
 
         p {
-            margin: 40px 0 60px;
+            margin-top: 40px;
         }
     }
 }

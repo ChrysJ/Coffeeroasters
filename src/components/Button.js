@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Button = ({ textContent, link }) => {
   return (
     <NavLink to={link}>
-      <button>
+      <button className="btn">
         <span>{textContent}</span>
       </button>
     </NavLink>

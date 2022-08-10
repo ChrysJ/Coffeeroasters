@@ -40,6 +40,7 @@ $color-5: #83888F;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 li {
@@ -59,6 +60,7 @@ body {
     padding: 0 80px 80px;
     max-width: 1980px;
     margin: 0 auto;
+    
 }
 
 // ---------- TEXT

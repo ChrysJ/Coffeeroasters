@@ -2,7 +2,7 @@ import React from "react";
 import Chooseus from "../components/home-components/Qualityservices";
 import Herobanner from "../components/Herobanner";
 import Ourcollection from "../components/home-components/Ourcollection";
-import Works from "../components/Works";
+import Works from "../components/Worksstepper";
 import Logo from "../components/Logo";
 import Navigation from "../components/Navigation";
 import Button from "../components/Button";
