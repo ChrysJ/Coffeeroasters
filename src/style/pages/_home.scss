@@ -16,47 +16,38 @@
 
     div {
         padding-left: 85px;
+        color: $color-4;
+        width: 50%;
 
         h1 {
             font-size: 4.5em;
             line-height: 95px;
-            color: $color-4;
-            width: 50%;
         }
 
         p {
             margin: 40px 0 60px;
-            color: $color-4;
-            width: 40%;
         }
     }
 }
 
-
 // ------Collection
 
 .section-collection {
-    margin-top: 150px;
-    width: 93%;
-    margin: 0 auto 200px;
+    margin: 150px auto 200px;
+    padding: 0 85px;
 
     .title-collection {
         margin-top: 275px;
         position: relative;
-        width: 100%;
-
 
         h2 {
-            font-size: 9.4em;
+            font-size: 9em;
             text-align: center;
             width: 100%;
             position: absolute;
             top: -110px;
             z-index: -1;
-            background-color: red;
             background: linear-gradient(to top, $color-4, #f0f0f0, #e7e7e7, #d3d3d3, #e7e7e7);
-            background-size: 100%;
-            background-repeat: repeat;
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -64,26 +55,25 @@
 
     .collection {
         display: grid;
-        grid-template-columns: repeat(4, 25%);
+        grid-template-columns: repeat(4, 1fr);
         justify-self: center;
+        grid-gap: 2em;
 
         .item-collection {
             @include alignChildren(center, center);
             flex-direction: column;
             text-align: center;
+            color: $color-2;
 
             img {
-                width: 250px;
+                width: 100%;
+                max-width: 250px;
+                min-width: 150px;
             }
 
             h3 {
                 margin: 70px 0 25px;
-                color: $color-2;
                 font-size: 1.5em;
-            }
-
-            p {
-                width: 90%;
             }
         }
     }
@@ -94,42 +84,38 @@
 .section-quality {
     background-image: url(../../../public/assets/img/bg-steps.png);
     height: 575px;
-    background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 15px;
     text-align: center;
     padding-top: 100px;
-    position: relative;
-    margin-bottom: 360px;
+    margin-bottom: 330px;
 
     h4 {
         color: $color-4;
         font-size: 2.5em;
-
     }
 
     p {
         color: $color-4;
-        width: 35%;
+        width: 45%;
         margin: 35px auto 0;
     }
 
     .quality-services {
-        @include alignChildren (center, center);
-        position: absolute;
-        bottom: -30%;
-        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 5%;
         width: 100%;
 
-
         .services {
+            justify-self: center;
             background-color: $color-1;
             margin: 15px;
             padding: 50px;
             border-radius: 10px;
-            min-height: 330px;
-            width: 350px;
+            min-height: 350px;
+            max-width: 350px;
 
             img {
                 height: 70px;
@@ -149,7 +135,3 @@
         }
     }
 }
-
-// ------How it works
-
-

@@ -1,4 +1,83 @@
-.subscribe-herobanner{
+.subscribe-herobanner {
     background-image: url(../../../public/assets/img/subscribe/image-hero-blackcup.jpg);
+}
+
+.section-createplan {
+    padding: 0 85px;
+    display: grid;
+    grid-template-columns: 30% 50%;
+    justify-self: center;
+
+
+    .create-plan {
+        display: flex;
+        justify-content: space-between;
+
+        .choice {
+            background-color: #F4F1EB;
+            margin: 13px;
+            height: 250px;
+            width: 230px;
+            border-radius: 8px;
+
+            input[type="radio"] {
+                display: none;
+            }
+
+
+            input[type="radio"]:checked+label {
+                background-color: $color-1;
+                color: $color-4;
+            }
+
+            label {
+                display: block;
+                color: $color-2;
+                cursor: pointer;
+                height: 100%;
+                padding: 30px;
+                border-radius: 8px;
+
+                &:hover {
+                    background-color: $color-3;
+                }
+
+                h4 {
+                    font-size: 1.5em;
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+}
+
+.paragraph-plan {
+    background-image: url(../../../public/assets/img/bg-quality.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 65px;
+    border-radius: 10px;
+    margin: 40px 0;
+
+    .order-summary {
+        font-family: $font-2;
+        color: $color-4;
+        font-size: 1em;
+        opacity: 0.5;
+        text-transform: uppercase;
+    }
+
+
+    p {
+        margin-top: 10px;
+        font-family: $font-1;
+        font-size: 1.5em;
+        color: $color-4;
+    }
+
+    span {
+        color: $color-1;
+    }
 }
 

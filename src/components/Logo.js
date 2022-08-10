@@ -8,12 +8,12 @@ const Logo = ({ header, footer, link }) => {
     <div className="header-logo">
       {header && (
         <NavLink to={link}>
-          <img src={logoHeader} alt="ceci est mon logo"></img>
+          <img src={logoHeader} alt="logo coffeeroasters"></img>
         </NavLink>
       )}
       {footer && (
         <NavLink to={link}>
-          <img src={logoFooter} alt="ceci est mon logo"></img> 
+          <img src={logoFooter} alt="logo coffeeroasters"></img>
         </NavLink>
       )}
     </div>

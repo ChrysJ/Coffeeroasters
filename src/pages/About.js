@@ -1,5 +1,6 @@
 import React from "react";
 import Commitment from "../components/about-components/Commitment";
+import Headquaters from "../components/about-components/Headquaters";
 import Quality from "../components/about-components/Quality";
 import Herobanner from "../components/Herobanner";
 import Logo from "../components/Logo";
@@ -24,6 +25,7 @@ const About = () => {
         </section>
         <Commitment />
         <Quality />
+        <Headquaters />
       </main>
       <footer className="footer">
         <div className="footer-left">
