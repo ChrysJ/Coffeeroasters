@@ -8,17 +8,17 @@ const Socialmedias = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i class="fa-brands fa-square-facebook"></i>
+        <i className="fa-brands fa-square-facebook"></i>
       </a>
       <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-twitter"></i>
+        <i className="fa-brands fa-twitter"></i>
       </a>
       <a
         href="https://www.instagram.com/?hl=fr"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <i class="fa-brands fa-instagram"></i>
+        <i className="fa-brands fa-instagram"></i>
       </a>
     </div>
   );

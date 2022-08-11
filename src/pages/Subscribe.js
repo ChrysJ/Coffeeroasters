@@ -9,6 +9,7 @@ import Createplan from "../components/subscribe-components/Createplan";
 import Navigationplan from "../components/subscribe-components/Navigationplan";
 import Userplan from "../components/subscribe-components/Userplan";
 import Works from "../components/Worksstepper";
+import { useRef } from "react";
 
 const Subscribe = () => {
   // Paragraphe création du plan
@@ -33,6 +34,7 @@ const Subscribe = () => {
       {paragraph3} ground ala {paragraph4}, sent to me {paragraph5}.“
     </p>
   );
+
   //
   return (
     <div>
@@ -53,14 +55,16 @@ const Subscribe = () => {
           <Works />
         </section>
         <section className="section-createplan">
-          <Navigationplan
-            firstWord={firstWord}
-            secondWord={secondWord}
-            thirdWord={thirdWord}
-            fourthWord={fourthWord}
-            fifthWord={fifthWord}
-          />
           <div>
+            <Navigationplan
+              firstWord={firstWord}
+              secondWord={secondWord}
+              thirdWord={thirdWord}
+              fourthWord={fourthWord}
+              fifthWord={fifthWord}
+            />
+          </div>
+          <div className="container-choice">
             <Createplan
               titleChoice={"How do you drink your coffee?"}
               id={"tofirstchoice"}

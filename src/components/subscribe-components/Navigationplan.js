@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import { useEffect } from "react";
 
 const Navigationplan = ({
   firstWord,
@@ -7,6 +8,25 @@ const Navigationplan = ({
   fourthWord,
   fifthWord,
 }) => {
+  const visibilityEl = useRef();
+
+  const handleScroll = () => {
+    console.log(window.scrollY);
+    if (window.scrollY >= 1120) {
+      visibilityEl.current.style.visibility = "visible";
+    } else if (window.scrollY < 1120) {
+      visibilityEl.current.style.visibility = "hidden";
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return function cleanup() {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [visibilityEl]);
+
+  // Style navigation
   if (firstWord !== "...") {
     const firstChoice = document.querySelector(".firstchoice");
     firstChoice.style.opacity = "0.4";
@@ -29,7 +49,7 @@ const Navigationplan = ({
   }
 
   return (
-    <div className="navigation-plan">
+    <div className="navigation-plan" ref={visibilityEl}>
       <ul>
         <li>
           <a href="#tofirstchoice">

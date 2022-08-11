@@ -1,8 +1,8 @@
-import { isDisabled } from "@testing-library/user-event/dist/utils";
 import React from "react";
+import { useRef } from "react";
 import { useState } from "react";
 
-const Btncreateplan = ({
+const Modalcheckout = ({
   firstWord,
   secondWord,
   thirdWord,
@@ -12,6 +12,8 @@ const Btncreateplan = ({
 }) => {
   // State
   const [pricePlan, setPricePlan] = useState("0");
+  const btnCreatePlan = useRef();
+  const modalCheckout = useRef();
   // Comportement
   //   Controle empty choice
   if (
@@ -21,8 +23,7 @@ const Btncreateplan = ({
     fourthWord !== "..." &&
     fifthWord !== "..."
   ) {
-    const btnCreatePlan = document.querySelector(".btn");
-    btnCreatePlan.classList.remove("disabled");
+    btnCreatePlan.current.classList.remove("disabled");
   }
   //
 
@@ -39,31 +40,42 @@ const Btncreateplan = ({
     }
   };
   //
-  const handleClick = (e) => {
-    if (e.currentTarget.classList.contains("disabled")) {
-      alert("wshalors");
+
+  const handleClick = () => {
+    if (btnCreatePlan.current.classList.contains("disabled")) {
+      alert("Veuillez indiquer vos préférences");
     } else {
       priceUserPlan();
       //   Affichage de la modale
+      modalCheckout.current.style.visibility = "visible";
     }
   };
 
-  // Return
+  const modalHidden = () => {
+    modalCheckout.current.style.visibility = "hidden";
+  };
+
+  //
   return (
     <div className="container-btn-createplan">
-      <button onClick={handleClick} className="btn disabled">
+      <button
+        ref={btnCreatePlan}
+        onClick={handleClick}
+        className="btn disabled"
+      >
         <span>Create my plan!</span>
       </button>
 
-      <div className="modal-order-summary">
+      <div ref={modalCheckout} className="modal-order-summary">
         <div className="modal-content">
           <div className="modal-title">
             <h5>Order Summary</h5>
+            <i className="fa-solid fa-xmark" onClick={() => modalHidden()}></i>
           </div>
           <div className="modal-checkout">
-          <div className="paragraph-plan">
-          <p>{userPlanCreated}</p>
-          </div>
+            <div className="paragraph-plan">
+            {userPlanCreated}
+            </div>
             <p>
               Is this correct? You can proceed to checkout or go back to plan
               selection if something is off. Subscription discount codes can
@@ -82,4 +94,4 @@ const Btncreateplan = ({
   );
 };
 
-export default Btncreateplan;
+export default Modalcheckout;
